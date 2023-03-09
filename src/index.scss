@@ -12,3 +12,19 @@
   --color-text: #81AFDD;
   --color-subtext: #FF8A71;
 }
+
+@mixin devices($breakpoint) {
+  @if $breakpoint == computer {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media only screen and (max-width: 540px) {
+      @content;
+    }
+  } 
+}

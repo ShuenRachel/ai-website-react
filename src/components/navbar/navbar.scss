@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .style {
   &-text {
     color: white;
@@ -35,6 +37,14 @@
 
     padding: 2rem 6rem;
 
+    @include devices(tablet) {
+      padding: 2rem 4rem;
+    }
+
+    @include devices(mobile) {
+      padding: 2rem;
+    }
+
     &-links {
       flex: 1;
 
@@ -57,6 +67,10 @@
         p {
           @extend .style-text;
         }
+
+        @include devices(computer) {
+          display: none;
+        }
       }
     }
 
@@ -64,6 +78,10 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+
+      @include devices(mobile) {
+        display: none;
+      }
 
       p {
         @extend .style-text;
@@ -75,9 +93,57 @@
     }
 
     &-menu {
+      margin-left: 1rem;
+
+      display: none;
+      position: relative;
+
+      @include devices(computer) {
+        display: flex;
+      }
+
+      svg {
+        cursor: pointer;
+      }
+
       &_container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        text-align: end;
+        background: var(--color-footer);
+        padding: 2rem;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        margin-top: 1rem;
+        min-width: 210px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+        @include devices(mobile) {
+          top: 20px;
+        }
+
         p {
           @extend .style-text;
+          margin: 1rem 0;
+        }
+
+        &-links {
+          &-sign {
+            display: none;
+
+            button {
+              @extend .style-button;
+            }
+
+            @include devices(mobile) {
+              display: block;
+            }
+          }
         }
       }
     }
