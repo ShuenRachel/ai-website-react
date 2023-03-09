@@ -1,0 +1,85 @@
+.style {
+  &-text {
+    color: white;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+
+  &-button {
+    padding: 0.5rem 2rem;
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+
+    background: #ff4820;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.gpt3 {
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 6rem;
+
+    &-links {
+      flex: 1;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &_logo {
+        margin-right: 2rem;
+
+        img {
+          width: 62.56px;
+          height: 16.02px;
+        }
+      }
+
+      &_container {
+        display: flex;
+
+        p {
+          @extend .style-text;
+        }
+      }
+    }
+
+    &-sign {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      p {
+        @extend .style-text;
+      }
+
+      button {
+        @extend .style-button;
+      }
+    }
+
+    &-menu {
+      &_container {
+        p {
+          @extend .style-text;
+        }
+      }
+    }
+  }
+}
