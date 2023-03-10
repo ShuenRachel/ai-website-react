@@ -10,7 +10,7 @@ import {
 
 const images = [googleImg, slackImg, atlassianImg, dropboxImg, shopifyImg];
 
-const imageItems = images.map((image) => (<div key={image}><img src={image} alt=''/></div>))
+const imageItems = images.map((image) => (<div className="gpt3__brand-image" key={image}><img src={image} alt=''/></div>))
 
 const Brand = () => {
   return <div className="gpt3__brand section__padding">{imageItems}</div>;
