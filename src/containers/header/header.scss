@@ -1,0 +1,71 @@
+.gpt3 {
+  &__header {
+    display: flex;
+
+    &-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-right: 5rem;
+
+      h1 {
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 62px;
+        line-height: 75px;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 27px;
+        color: #81afdd;
+        margin-top: 1.5rem;
+      }
+
+      &__input {
+        width: 100%;
+        margin: 2rem 0 1rem;
+        display: flex;
+
+        input {
+          flex: 2;
+          width: 100%;
+          min-height: 50px;
+          padding: 0 1rem;
+          background: var(--color-footer);
+          border: 2px solid var(--color-footer);
+          border-radius: 5px 0 0 5px;
+          outline: none;
+
+          color: #fff;
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 27px;
+        }
+
+        button {
+          flex: 0.6;
+          width: 100%;
+          min-height: 50px;
+
+          background: #ff4820;
+          border-radius: 0 5px 5px 0;
+          border: none;
+          //   transform: matrix(-1, 0, 0, 1, 0, 0);
+
+          color: #fff;
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
