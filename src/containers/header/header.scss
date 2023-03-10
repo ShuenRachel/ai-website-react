@@ -1,6 +1,12 @@
+@import "../../index.scss";
+
 .gpt3 {
   &__header {
     display: flex;
+
+    @include devices(computer) {
+      flex-direction: column;
+    }
 
     &-content {
       flex: 1;
@@ -10,12 +16,26 @@
       flex-direction: column;
       margin-right: 5rem;
 
+      @include devices(computer) {
+        margin: 0 0 3rem;
+      }
+
       h1 {
         font-family: var(--font-family);
         font-weight: 800;
         font-size: 62px;
         line-height: 75px;
         letter-spacing: -0.04em;
+
+        @include devices(tablet) {
+          font-size: 48px;
+          line-height: 60px;
+        }
+
+        @include devices(mobile) {
+          font-size: 36px;
+          line-height: 48px;
+        }
       }
 
       p {
@@ -25,6 +45,16 @@
         line-height: 27px;
         color: #81afdd;
         margin-top: 1.5rem;
+
+        @include devices(tablet) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        @include devices(mobile) {
+          font-size: 14px;
+          line-height: 24px;
+        }
       }
 
       &__input {
@@ -47,24 +77,89 @@
           font-weight: 500;
           font-size: 20px;
           line-height: 27px;
+
+          @include devices(tablet) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          @include devices(mobile) {
+            font-size: 12px;
+            line-height: 16px;
+          }
         }
 
         button {
           flex: 0.6;
           width: 100%;
           min-height: 50px;
+          padding: 0;
 
           background: #ff4820;
           border-radius: 0 5px 5px 0;
           border: none;
-          //   transform: matrix(-1, 0, 0, 1, 0, 0);
 
           color: #fff;
           font-family: var(--font-family);
           font-weight: 500;
           font-size: 20px;
           line-height: 27px;
+
+          cursor: pointer;
+
+          @include devices(tablet) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          @include devices(mobile) {
+            font-size: 12px;
+            line-height: 16px;
+          }
         }
+      }
+
+      &__people {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin-top: 2rem;
+
+        @include devices(tablet) {
+          flex-direction: column;
+        }
+
+        img {
+          width: 181.79px;
+          height: 38px;
+        }
+
+        p {
+          margin: 0 0 0 1rem;
+          color: #fff;
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 38px;
+          text-align: center;
+
+          @include devices(tablet) {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &-image {
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
   }
