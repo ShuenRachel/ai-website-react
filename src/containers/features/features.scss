@@ -1,1 +1,56 @@
+@import "../../index.scss";
 
+.gpt3__features {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include devices(tablet) {
+    flex-direction: column;
+  }
+
+  &-heading {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    text-align: left;
+    margin-right: 5rem;
+
+    @include devices(tablet) {
+      margin: 0 0 2rem 0;
+    }
+
+    h1 {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 45px;
+
+      @include devices(mobile) {
+        font-size: 28px;
+        line-height: 38px;
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      font-family: var(--font-family);
+      font-size: 16px;
+      line-height: 30px;
+      color: #ff8a71;
+    }
+  }
+
+  &-container {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
