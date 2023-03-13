@@ -52,7 +52,6 @@
 
     &-feature {
       & .gpt3__features-container__feature {
-        outline: 1px solid red;
         margin: 0;
 
         @include devices(650px) {
@@ -117,6 +116,14 @@
       display: flex;
       flex-wrap: wrap;
       margin-top: 2rem;
+
+      @include devices(mobile) {
+flex-direction: column;
+      }
+
+      & .gpt3__features-container__feature {
+        flex-direction: column;
+      }
     }
   }
 }
