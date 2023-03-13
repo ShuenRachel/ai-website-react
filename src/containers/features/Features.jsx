@@ -3,7 +3,7 @@ import './features.scss'
 
 const Features = () => {
   return (
-    <div className='hello'>Features
+    <div className='gpt3__features-container__feature'>Features
     </div>
   )
 }
