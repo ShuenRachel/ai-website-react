@@ -1,0 +1,163 @@
+@import "../../index.scss";
+
+.gpt3__footer {
+  background: var(--color-footer);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-heading {
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include devices(mobile) {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-family: var(--font-family);
+      font-weight: 800;
+      font-size: 62px;
+      line-height: 75px;
+      letter-spacing: -0.04em;
+
+      @include devices(tablet) {
+        font-size: 44px;
+        line-height: 50px;
+      }
+
+      @include devices(mobile) {
+        font-size: 34px;
+        line-height: 42px;
+      }
+    }
+  }
+
+  &-button {
+    padding: 1rem;
+    margin-bottom: 10rem;
+    border: 1px solid #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    word-spacing: 2px;
+
+    cursor: pointer;
+
+    @include devices(tablet) {
+      margin-bottom: 5rem;
+    }
+
+    @include devices(tablet) {
+      margin-bottom: 3rem;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &-links {
+    width: 100%;
+    text-align: left;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    font-family: var(--font-family);
+    color: #fff;
+
+    @include devices(tablet) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    &_logo {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 118px;
+        height: 30px;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+
+    &_container {
+      flex: 2;
+
+      display: flex;
+      justify-content: space-evenly;
+
+      @include devices(tablet) {
+        flex: 1;
+        justify-content: flex-start;
+        gap: 4rem;
+      }
+
+      @include devices(mobile) {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        h4 {
+          margin-bottom: 1rem;
+          font-size: 14px;
+          line-height: 16px;
+
+          @include devices(mobile) {
+            margin-bottom: 0.5rem;
+            line-height: 14px;
+          }
+        }
+
+        p {
+          margin: 0.5rem 0;
+          font-size: 12px;
+          line-height: 20px;
+          cursor: pointer;
+
+          @include devices(mobile) {
+            line-height: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  &-copyright {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+
+    @include devices(tablet) {
+      margin-top: 3rem;
+    }
+  }
+}
