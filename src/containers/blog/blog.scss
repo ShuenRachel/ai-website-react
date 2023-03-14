@@ -1,0 +1,87 @@
+@import "../../index.scss";
+
+.gpt3__blog {
+  display: flex;
+  flex-direction: column;
+
+  &-heading {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5rem;
+    text-align: left;
+
+    @include devices(tablet) {
+      margin-bottom: 2.5rem;
+    }
+
+    @include devices(mobile) {
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      padding-bottom: 0.75rem;
+      font-family: var(--font-family);
+      font-weight: 800;
+      font-size: 62px;
+      line-height: 75px;
+      letter-spacing: -0.04em;
+
+      @include devices(tablet) {
+        padding-bottom: 0.5rem;
+        font-size: 46px;
+        line-height: 52px;
+      }
+
+      @include devices(mobile) {
+        padding-bottom: 0.1rem;
+        font-size: 34px;
+        line-height: 42px;
+      }
+    }
+  }
+
+  &-container {
+    display: flex;
+
+    @include devices(990px) {
+      flex-direction: column-reverse;
+      gap: 2rem;
+    }
+
+    &_groupA {
+      margin-right: 2rem;
+      flex: 0.75;
+
+      @include devices(990px) {
+        margin: 2rem 0;
+      }
+
+      .gpt3__blog-container_article {
+        @include devices(990px) {
+          width: 48%;
+        }
+
+        @include devices(tablet) {
+          width: 100%;
+        }
+      }
+
+      .gpt3__blog-container_article-image {
+        @include devices(990px) {
+          height: 250px;
+        }
+      }
+    }
+
+    &_groupB {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+
+      @include devices(tablet) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
