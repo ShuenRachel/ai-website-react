@@ -34,7 +34,9 @@ const Footer = () => {
           </div>
           <div>
             <h4>Get in touch</h4>
-            <p>Crechterwoord K12 <br/> 182 DK Alknjkcb</p>
+            <p>
+              Crechterwoord K12 <br /> 182 DK Alknjkcb
+            </p>
             <p>085-132567</p>
             <p>info@payme.net</p>
           </div>
